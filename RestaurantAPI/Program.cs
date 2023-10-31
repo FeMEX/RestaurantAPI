@@ -12,9 +12,9 @@ builder.Host.UseNLog();
 
 
 // Add services to the container.
-builder.Services.AddTransient<IWeatherForcastService, WeatherForcastService>();
 builder.Services.AddDbContext<RestaurantDbContext>();
 builder.Services.AddScoped<RestaurantSeeder>();
+builder.Services.AddAutoMapper(typeof(RestaurantMappingProfile));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
