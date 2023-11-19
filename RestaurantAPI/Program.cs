@@ -20,7 +20,7 @@ builder.Services.AddScoped<RestaurantSeeder>();
 builder.Services.AddAutoMapper(typeof(RestaurantMappingProfile));
 builder.Services.AddScoped<IRestaurantService, RestaurantService>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
-
+builder.Services.AddScoped<IDishService, DishService>();
 
 
 builder.Services.AddControllers();
