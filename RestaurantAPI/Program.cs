@@ -21,7 +21,7 @@ builder.Services.AddAutoMapper(typeof(RestaurantMappingProfile));
 builder.Services.AddScoped<IRestaurantService, RestaurantService>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
 builder.Services.AddScoped<IDishService, DishService>();
-
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
